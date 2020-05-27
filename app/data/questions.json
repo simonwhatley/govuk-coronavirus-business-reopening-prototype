@@ -1,0 +1,26 @@
+[
+  {
+    "id": "question-slug",
+    "name": "answers[question-slug]",
+    "title": "Question?",
+    "type": "single",
+    "items": [
+      {
+        "value": "answer_1",
+        "text": "Answer 1"
+      },
+      {
+        "value": "answer_2",
+        "text": "Answer 2"
+      },
+      {
+        "value": "answer_3",
+        "text": "Answer 3"
+      },
+      {
+        "value": "answer_4",
+        "text": "Answer 4"
+      }
+    ]
+  }
+]

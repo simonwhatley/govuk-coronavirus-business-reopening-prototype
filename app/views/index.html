@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
+
+    <p class="govuk-body">
+      If you want to reopen your business you have a legal responsibility to protect your staff and other people on site.
+    </p>
+
+    <p class="govuk-body">
+      This guidance helps you carry out your risk assessment. You can use it to make sensible adjustments to your site and workforce.
+    </p>
+
+    <p class="govuk-body">
+      If you do not carry out a risk assessment, the Health and Safety Executive (HSE) or your local council can issue an enforcement notice.
+    </p>
+
+    {{ govukButton({
+      text: "Start now",
+      href: actions.start,
+      isStartButton: true,
+      classes: "govuk-!-margin-top-5"
+    }) }}
+
+    <!-- <p class="app-c-meta-data">
+      Last updated: 27 May 2020
+    </p> -->
+
+  </div>
+</div>
+
+{% endblock %}
