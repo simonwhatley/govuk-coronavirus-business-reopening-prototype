@@ -38,6 +38,10 @@
       {
         "value": "vehicles",
         "text": "Vehicles - working in or from a vehicle"
+      },
+      {
+        "value": "none",
+        "text": "None of the above"
       }
     ]
   },
