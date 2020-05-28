@@ -23,43 +23,19 @@
       {{ serviceName }}
     </h1>
 
-    <h2 class="govuk-heading-m">Support you may be entitled to</h2>
+    <h2 class="govuk-heading-m">Guidance to carry out your risk assessment</h2>
 
     <div class="app-c-govspeak app-c-markdown">
 
-      {%- for scheme in schemes %}
-        {%- if scheme.id in rules %}
+      {%- for outcome in outcomes %}
+        {%- if outcome.id in rules %}
         <div class="call-to-action">
-          {{ scheme.description | markdownToHtml | safe }}
+          {{ outcome.description | markdownToHtml | safe }}
         </div>
         {% endif -%}
       {% endfor -%}
 
-      {%- if data.answers['business-location'] == "scotland" %}
-      <div class="call-to-action">
-        <p class="govuk-body">
-          Find out <a class="govuk-link" href="https://findbusinesssupport.gov.scot/coronavirus-advice">what support is available in Scotland</a>. You can be eligible for both Scottish and UK-wide schemes.
-        </p>
-      </div>
-      {% elif data.answers['business-location'] == "wales" %}
-      <div class="call-to-action">
-        <p class="govuk-body">
-          Find out <a class="govuk-link" href="https://businesswales.gov.wales/coronavirus-advice">what support is available in Wales</a>. You can be eligible for both Welsh and UK-wide schemes.
-        </p>
-      </div>
-      {% elif data.answers['business-location'] == "northern_ireland" %}
-      <div class="call-to-action">
-        <p class="govuk-body">
-          Find out <a class="govuk-link" href="https://www.nibusinessinfo.co.uk/business-support/coronavirus">what support is available in Northern Ireland</a>. You can be eligible for both Northern Ireland and UK-wide schemes.
-        </p>
-      </div>
-      {% endif -%}
-
     </div>
-
-    <p class="govuk-body">Please note that you may be eligible for more than one scheme, whether your business is open or closed.</p>
-
-    <p class="govuk-body">For detailed information about different types of business support schemes, check the <a class="govuk-link" href="https://www.gov.uk/coronavirus/business-support">coronavirus business support page</a>.</p>
 
     <div class="app-c-govspeak app-c-markdown govuk-!-margin-top-7">
       <div class="call-to-action">
@@ -69,7 +45,7 @@
         <h3 class="govuk-!-font-size-19">Stay up to date</h3>
         <p class="govuk-body">
           <a class="govuk-link" href="#">
-            Sign up for email updates about business funding and support
+            Sign up for email updates about reopening your business
           </a>
         </p>
       </div>

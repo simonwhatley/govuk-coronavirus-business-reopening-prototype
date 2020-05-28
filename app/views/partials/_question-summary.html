@@ -20,102 +20,69 @@
   rows: [
     [
       {
-        text: "Where is your business based?"
+        text: "Which of these sectors apply to your business?"
       },
       {
-        text: data.answers['business-location'] | getAnswerAsString('business-location')
+        text: data.answers['sectors'] | getAnswerAsString('sectors')
       },
       {
-        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=business-location">Change <span class="govuk-visually-hidden">where your business is based</span></a>'
+        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=sectors">Change <span class="govuk-visually-hidden">where your business is based</span></a>'
       }
-    ] if data.answers['business-location'] | length,
+    ] if data.answers['sectors'] | length,
     [
       {
-        text: "What size was your business as of 28 February?"
+        text: "How many staff do you have?"
       },
       {
-        text: data.answers['business-size'] | getAnswerAsString('business-size')
+        text: data.answers['staff'] | getAnswerAsString('staff')
       },
       {
-        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=business-size">Change <span class="govuk-visually-hidden">what size your business was as of 28 February</span></a>'
+        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=staff">Change <span class="govuk-visually-hidden">what size your business was as of 28 February</span></a>'
       }
-    ] if data.answers['business-size'] | length,
+    ] if data.answers['staff'] | length,
     [
       {
-        text: "What is your turnover per year?"
+        text: "Do you have customers, visitors or contractors on site?"
       },
       {
-        text: data.answers['annual-turnover'] | getAnswerAsString('annual-turnover')
+        text: data.answers['visitors'] | getAnswerAsString('visitors')
       },
       {
-        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=annual-turnover">Change <span class="govuk-visually-hidden">the value of your turnover per year</span></a>'
+        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=visitors">Change <span class="govuk-visually-hidden">the value of your turnover per year</span></a>'
       }
-    ] if data.answers['annual-turnover'] | length,
+    ] if data.answers['visitors'] | length,
     [
       {
-        text: "Are you an employer with a PAYE scheme?"
+        text: "Do you have any staff meetings (small or large)?"
       },
       {
-        text: data.answers['paye-scheme'] | getAnswerAsString('paye-scheme')
+        text: data.answers['meetings'] | getAnswerAsString('meetings')
       },
       {
-        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=paye-scheme">Change <span class="govuk-visually-hidden">whether your are an employer with a PAYE scheme</span></a>'
+        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=meetings">Change <span class="govuk-visually-hidden">whether your are an employer with a PAYE scheme</span></a>'
       }
-    ] if data.answers['paye-scheme'] | length,
+    ] if data.answers['meetings'] | length,
     [
       {
-        text: "Are you self-employed?"
+        text: "Do your employees need to travel for work?"
       },
       {
-        text: data.answers['self-employed'] | getAnswerAsString('self-employed')
+        text: data.answers['travel'] | getAnswerAsString('travel')
       },
       {
-        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=self-employed">Change <span class="govuk-visually-hidden">whether you are self-employed</span></a>'
+        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=travel">Change <span class="govuk-visually-hidden">whether you are travel</span></a>'
       }
-    ] if data.answers['self-employed'] | length,
+    ] if data.answers['travel'] | length,
     [
       {
-        text: "What is the rateable value of your business' non-domestic property?"
+        text: "On your site do you receive and send goods?"
       },
       {
-        text: data.answers['non-domestic-property'] | getAnswerAsString('non-domestic-property')
+        text: data.answers['goods'] | getAnswerAsString('goods')
       },
       {
-        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=non-domestic-property">Change <span class="govuk-visually-hidden">whether your business has a non-domestic property with a rateable value</span></a>'
+        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=goods">Change <span class="govuk-visually-hidden">whether your business has a non-domestic property with a rateable value</span></a>'
       }
-    ] if data.answers['non-domestic-property'] | length,
-    [
-      {
-        text: "Is your business in any of the following sectors:"
-      },
-      {
-        text: data.answers['business-sector'] | getAnswerAsString('business-sector')
-      },
-      {
-        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=business-sector">Change <span class="govuk-visually-hidden">whether your business is in a sector</span></a>'
-      }
-    ] if data.answers['business-sector'] | length,
-    [
-      {
-        text: "Is your business in receipt of small business rate relief or rural rate relief as of the 11 March 2020?"
-      },
-      {
-        text: data.answers['rate-relief'] | getAnswerAsString('rate-relief')
-      },
-      {
-        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=rate-relief">Change <span class="govuk-visually-hidden">whether your business is in receipt of small business rate relief or rural rate relief as of the 11 March 2020</span></a>'
-      }
-    ] if data.answers['rate-relief'] | length,
-    [
-      {
-        text: "Are you due to pay a self-assessment payment on account by 31 July 2020?"
-      },
-      {
-        text: data.answers['self-assessment-payment'] | getAnswerAsString('self-assessment-payment')
-      },
-      {
-        html: '<a class="govuk-link no-visited-state" href="/change-answer?question=self-assessment-payment">Change <span class="govuk-visually-hidden">whether you are due to pay a self-assessment payment on account by 31 July 2020</span></a>'
-      }
-    ] if data.answers['self-assessment-payment'] | length
+    ] if data.answers['goods'] | length
   ]
 }) }}

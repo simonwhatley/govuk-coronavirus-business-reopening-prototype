@@ -1,40 +1,47 @@
 const questions = require('../data/questions.json');
 
-exports.findQuestionById = function(question_id) {
+exports.findQuestionById = function(questionId) {
   let question = {};
-  question = questions.filter( obj => obj.id === question_id );
+  console.log("find",questionId);
+  question = questions.filter( obj => obj.id === questionId );
   return question[0];
 };
 
-exports.question = function(question_id, answer_value) {
-  
-  if (!question_id)
+exports.question = function(questionId, answerValue) {
+
+  if (!questionId)
     return null;
-  
-  let question = this.findQuestionById(question_id);
-  
-  if (answer_value !== undefined) {
-  
+
+  console.log("question",questionId);
+
+  let question = this.findQuestionById(questionId);
+
+  if (answerValue !== undefined) {
+
     question.items.forEach((item) => {
-      
+
       item.checked = false;
-      
+
       if (question.type == 'single') {
-        if (item.value == answer_value) {
+        if (item.value == answerValue) {
           item.checked = true;
+        } else {
+          item.checked = false;
         }
       }
-      
+
       if (question.type == 'multiple') {
-        if (answer_value.indexOf(item.value) !== -1) {
+        if (answerValue.indexOf(item.value) !== -1) {
           item.checked = true;
+        } else {
+          item.checked = false;
         }
       }
-      
+
     });
-    
+
   }
-  
+
   return question;
 
 }
