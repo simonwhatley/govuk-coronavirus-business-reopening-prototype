@@ -83,7 +83,7 @@
     "id": "meetings",
     "name": "answers[meetings]",
     "position": 4,
-    "title": "Do you have any staff meetings (small or large)?",
+    "title": "Do you have any staff meetings?",
     "type": "single",
     "items": [
       {

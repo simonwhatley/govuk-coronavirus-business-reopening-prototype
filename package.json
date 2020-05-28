@@ -1,6 +1,6 @@
 {
   "name": "govuk-coronavirus-business-reopening-prototype",
-  "description": "Carry out a risk assessment to reopen your business",
+  "description": "Reopen your business safely during coronavirus (COVID-19)",
   "version": "9.6.0",
   "private": true,
   "engines": {
