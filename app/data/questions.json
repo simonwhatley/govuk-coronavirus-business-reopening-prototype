@@ -4,7 +4,7 @@
     "name": "answers[sectors]",
     "position": 1,
     "title": "Which of these sectors apply to your business?",
-    "hint": "Select all that apply",
+    "hint": "Choose all that apply",
     "type": "multiple",
     "items": [
       {
@@ -117,7 +117,7 @@
     "id": "goods",
     "name": "answers[goods]",
     "position": 6,
-    "title": "On your site do you send or receive goods?",
+    "title": "Do you send or receive goods on your site?",
     "type": "single",
     "items": [
       {
