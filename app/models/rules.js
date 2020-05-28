@@ -18,7 +18,13 @@ exports.find = function(answers) {
   //
   // }
 
-  outcomes.push('risk_assessment');
+  if (answers['staff'] !== undefined) {
+
+    if (answers['staff'] == 'over_4') {
+      outcomes.push('risk_assessment');
+    }
+
+  }
 
   outcomes.push('on_site_or_remote');
 

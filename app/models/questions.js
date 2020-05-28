@@ -2,7 +2,6 @@ const questions = require('../data/questions.json');
 
 exports.findQuestionById = function(questionId) {
   let question = {};
-  console.log("find",questionId);
   question = questions.filter( obj => obj.id === questionId );
   return question[0];
 };
@@ -11,8 +10,6 @@ exports.question = function(questionId, answerValue) {
 
   if (!questionId)
     return null;
-
-  console.log("question",questionId);
 
   let question = this.findQuestionById(questionId);
 
