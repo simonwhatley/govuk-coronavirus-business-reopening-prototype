@@ -1,25 +1,132 @@
 [
   {
-    "id": "question-slug",
-    "name": "answers[question-slug]",
-    "title": "Question?",
+    "id": "sectors",
+    "name": "answers[sectors]",
+    "position": 1,
+    "title": "Which of these sectors apply to your business?",
+    "hint": "Choose all that apply",
+    "type": "multiple",
+    "items": [
+      {
+        "value": "construction",
+        "text": "Construction and other outdoor work"
+      },
+      {
+        "value": "factories",
+        "text": "Factories, plants, warehouses"
+      },
+      {
+        "value": "research",
+        "text": "Labs and research facilities"
+      },
+      {
+        "value": "offices",
+        "text": "Offices, contact centres, operation rooms"
+      },
+      {
+        "value": "homes",
+        "text": "Working in other people’s homes"
+      },
+      {
+        "value": "restaurants",
+        "text": "Restaurants with takeaway and delivery"
+      },
+      {
+        "value": "shops",
+        "text": "Shops and branches"
+      },
+      {
+        "value": "vehicles",
+        "text": "Vehicles - working in or from a vehicle"
+      },
+      {
+        "value": "none",
+        "text": "None of the above"
+      }
+    ]
+  },
+  {
+    "id": "staff",
+    "name": "answers[staff]",
+    "position": 2,
+    "title": "How many staff do you have?",
     "type": "single",
     "items": [
       {
-        "value": "answer_1",
-        "text": "Answer 1"
+        "value": "0_to_4",
+        "text": "0 to 4"
       },
       {
-        "value": "answer_2",
-        "text": "Answer 2"
+        "value": "over_4",
+        "text": "Over 4"
+      }
+    ]
+  },
+  {
+    "id": "visitors",
+    "name": "answers[visitors]",
+    "position": 3,
+    "title": "Do you have customers, visitors or contractors on site?",
+    "type": "single",
+    "items": [
+      {
+        "value": "yes",
+        "text": "Yes"
       },
       {
-        "value": "answer_3",
-        "text": "Answer 3"
+        "value": "no",
+        "text": "No"
+      }
+    ]
+  },
+  {
+    "id": "meetings",
+    "name": "answers[meetings]",
+    "position": 4,
+    "title": "Do you have any staff meetings?",
+    "type": "single",
+    "items": [
+      {
+        "value": "yes",
+        "text": "Yes"
       },
       {
-        "value": "answer_4",
-        "text": "Answer 4"
+        "value": "no",
+        "text": "No"
+      }
+    ]
+  },
+  {
+    "id": "travel",
+    "name": "answers[travel]",
+    "position": 5,
+    "title": "Do your employees need to travel for work?",
+    "type": "single",
+    "items": [
+      {
+        "value": "yes",
+        "text": "Yes"
+      },
+      {
+        "value": "no",
+        "text": "No"
+      }
+    ]
+  },
+  {
+    "id": "goods",
+    "name": "answers[goods]",
+    "position": 6,
+    "title": "Do you send or receive goods on your site?",
+    "type": "single",
+    "items": [
+      {
+        "value": "yes",
+        "text": "Yes"
+      },
+      {
+        "value": "no",
+        "text": "No"
       }
     ]
   }
