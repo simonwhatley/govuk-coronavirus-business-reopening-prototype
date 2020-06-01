@@ -23,7 +23,7 @@
       {{ serviceName }}
     </h1>
 
-    <h2 class="govuk-heading-m">Guidance to carry out your risk assessment</h2>
+    <!-- <h2 class="govuk-heading-m">Guidance to carry out your risk assessment</h2> -->
 
     <p class="govuk-body govuk-!-margin-bottom-7">This guidance can help you carry out your risk assessment to make sure you keep employees and other people on site safe when opening during coronavirus (COVID-19).</p>
 
@@ -31,9 +31,8 @@
 
       {%- for outcome in outcomes %}
         {%- if outcome.id in rules %}
-        <div class="call-to-action">
           {{ outcome.description | markdownToHtml | safe }}
-        </div>
+          <hr class="govuk-section-break--visible">
         {% endif -%}
       {% endfor -%}
 
