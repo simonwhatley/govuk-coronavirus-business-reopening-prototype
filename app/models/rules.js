@@ -28,14 +28,6 @@ exports.find = function(answers) {
 
   outcomes.push('on_site_or_remote');
 
-  if (answers['sectors'] !== undefined) {
-
-    if (answers['sectors'].indexOf('restaurants') !== -1) {
-      outcomes.push('restaurants_takeaway_delivery');
-    }
-
-  }
-
   outcomes.push('social_distancing');
 
   if (answers['sectors'] !== undefined) {
