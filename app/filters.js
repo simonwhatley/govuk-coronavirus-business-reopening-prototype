@@ -95,11 +95,53 @@ module.exports = function (env) {
 
     return error;
   }
-  
+
   /* ------------------------------------------------------------------
     utility function to get question's answer as string
-    example: {{ errors | getErrorMessage('title') }}
-    outputs: "Enter a title"
+    example: {{ data.answers | getAnswerAsString('sectors') }}
+    outputs: "Construction and other outdoor work, Factories, plants, warehouses,
+    Labs and research facilities"
+  ------------------------------------------------------------------ */
+  filters.getAnswerAsList = function(answerValue, fieldId) {
+    if (!fieldId || !answerValue)
+      return null;
+
+    let question = questions.filter( (obj) =>
+      obj.id == fieldId
+    )[0];
+
+    if (question.type == 'single') {
+
+      let answer = question.items.filter( (obj) =>
+        obj.value == answerValue
+      )[0];
+
+      return answer.text;
+    }
+
+    if (question.type == 'multiple') {
+
+      let answers = [];
+
+      question.items.forEach((item) => {
+
+        if (answerValue.indexOf(item.value) !== -1) {
+          answers.push(item.text);
+        }
+
+      });
+
+      let answerList = filters.arrayToList(answers);
+
+      return answerList;
+    }
+
+  }
+
+  /* ------------------------------------------------------------------
+    utility function to get question's answer as string
+    example: {{ data.answer | getAnswerAsString('construction') }}
+    outputs: "Construction and other outdoor work"
   ------------------------------------------------------------------ */
   filters.getAnswerAsString = function(answerValue, fieldId) {
     if (!fieldId || !answerValue)
@@ -108,35 +150,15 @@ module.exports = function (env) {
     let question = questions.filter( (obj) =>
       obj.id == fieldId
     )[0];
-    
-    if (question.type == 'single') {
-      
-      let answer = question.items.filter( (obj) =>
-        obj.value == answerValue
-      )[0];
 
-      return answer.text;
-    }
-    
-    if (question.type == 'multiple') {
-      
-      let answers = [];
-      
-      question.items.forEach((item) => {
-        
-        if (answerValue.indexOf(item.value) !== -1) {
-          answers.push(item.text);
-        }
-        
-      });
-      
-      let answerList = filters.arrayToList(answers);
+    let answer = question.items.filter( (obj) =>
+      obj.value == answerValue
+    )[0];
 
-      return answerList;
-    }
-    
+    return answer.text;
+
   }
-  
+
   /* ------------------------------------------------------------------
     utility function to create HTML from markdown
     example: {{ "**Enter a title**" | markdownToHtml }}
@@ -148,7 +170,7 @@ module.exports = function (env) {
 
     return html = marked(markdown);
   }
-  
+
   /*
   =====================================================================
   arrayToGovukTable
@@ -225,7 +247,7 @@ module.exports = function (env) {
   */
 
   // var CSV = require('csv-string')
-  // 
+  //
   // filters.csvToArray = (csvString) => {
   //   array = CSV.parse(csvString);
   //   // Flatten nested array if it's only a single line
