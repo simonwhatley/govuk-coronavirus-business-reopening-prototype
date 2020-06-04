@@ -3,41 +3,66 @@
     "id": "sectors",
     "name": "answers[sectors]",
     "position": 1,
-    "title": "Which of these sectors apply to your business?",
-    "hint": "Choose all that apply",
+    "label": {
+      "text": "Which of these sectors apply to your business?"
+    },
+    "hint": {
+      "text": "Choose all that apply"
+    },
     "type": "multiple",
     "items": [
       {
         "value": "construction",
-        "text": "Construction and other outdoor work"
+        "text": "Construction and other outdoor work",
+        "hint": {
+          "text": "For example, construction, energy and utilities, farming and agriculture, forestry, waste management and other infrastructure, railway services, street and highway services"
+        }
       },
       {
         "value": "factories",
-        "text": "Factories, plants, warehouses"
+        "text": "Factories, plants, warehouses",
+        "hint": {
+          "text": "For example, manufacturing and chemical plants, food and other large processing plants, warehouses, distribution centres, port operations"
+        }
       },
       {
         "value": "research",
-        "text": "Labs and research facilities"
+        "text": "Labs and research facilities",
+        "hint": {
+          "text": "For example, engineering centres, clean rooms, prototyping centres, wet labs, wind tunnels, computer labs, simulators, material development labs, specialist testing rooms"
+        }
       },
       {
         "value": "offices",
-        "text": "Offices, contact centres, operation rooms"
+        "text": "Offices, contact centres, operation rooms",
+        "hint": {
+          "text": "For example, repair services, fitters, meter readers, plumbers, cleaners, cooks, surveyors, delivery drivers who come to the door"
+        }
+      },
+      {
+        "value": "restaurants",
+        "text": "Restaurants with takeaway and delivery",
+        "hint": {
+          "text": "For example, restaurants and pubs operating as take-aways, bars, cafes, food to go, food delivery, takeaways and mobile catering, contract catering"
+        }
+      },
+      {
+        "value": "shops",
+        "text": "Shops and branches",
+        "hint": {
+          "text": "For example, all types of shops that are currently closed"
+        }
+      },
+      {
+        "value": "vehicles",
+        "text": "Vehicles - working in or from a vehicle",
+        "hint": {
+          "text": "For example, couriers, mobile workers, lorry drivers, on-site transit, work vehicles, field forces"
+        }
       },
       {
         "value": "homes",
         "text": "Working in other people’s homes"
-      },
-      {
-        "value": "restaurants",
-        "text": "Restaurants with takeaway and delivery"
-      },
-      {
-        "value": "shops",
-        "text": "Shops and branches"
-      },
-      {
-        "value": "vehicles",
-        "text": "Vehicles - working in or from a vehicle"
       },
       {
         "value": "none",
@@ -49,7 +74,9 @@
     "id": "staff",
     "name": "answers[staff]",
     "position": 2,
-    "title": "How many staff do you have?",
+    "label": {
+      "text": "How many staff do you have?"
+    },
     "type": "single",
     "items": [
       {
@@ -66,7 +93,9 @@
     "id": "visitors",
     "name": "answers[visitors]",
     "position": 3,
-    "title": "Do you have customers, visitors or contractors on site?",
+    "label": {
+      "text": "Do you have customers, visitors or contractors on site?"
+    },
     "type": "single",
     "items": [
       {
@@ -83,7 +112,9 @@
     "id": "meetings",
     "name": "answers[meetings]",
     "position": 4,
-    "title": "Do you have any staff meetings?",
+    "label": {
+      "text": "Do you have any staff meetings?"
+    },
     "type": "single",
     "items": [
       {
@@ -100,7 +131,9 @@
     "id": "travel",
     "name": "answers[travel]",
     "position": 5,
-    "title": "Do your employees need to travel for work?",
+    "label": {
+      "text": "Do your employees need to travel for work?"
+    },
     "type": "single",
     "items": [
       {
@@ -117,7 +150,9 @@
     "id": "goods",
     "name": "answers[goods]",
     "position": 6,
-    "title": "Do you send or receive goods on your site?",
+    "label": {
+      "text": "Do you send or receive goods on your site?"
+    },
     "type": "single",
     "items": [
       {

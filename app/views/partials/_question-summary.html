@@ -4,6 +4,14 @@
   <a class="govuk-link govuk-link--no-visited-state" href="/">Start again</a>
 </p>
 
+{%- set sectorsHtml %}
+<ul class="govuk-list govuk-list--bullet">
+  {%- for sector in data.answers['sectors'] %}
+    <li>{{ sector | getAnswerAsString('sectors') }}</li>
+  {% endfor -%}
+</ul>
+{% endset -%}
+
 {{ govukTable({
   firstCellIsHeader: false,
   head: [
@@ -23,7 +31,7 @@
         text: "Which of these sectors apply to your business?"
       },
       {
-        text: data.answers['sectors'] | getAnswerAsString('sectors')
+        text: sectorsHtml | safe
       },
       {
         html: '<a class="govuk-link no-visited-state" href="/change-answer?question=sectors">Change <span class="govuk-visually-hidden">where your business is based</span></a>'

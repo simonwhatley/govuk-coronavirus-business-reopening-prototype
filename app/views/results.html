@@ -23,23 +23,20 @@
       {{ serviceName }}
     </h1>
 
-    <h2 class="govuk-heading-m">Guidance to carry out your risk assessment</h2>
-
     <p class="govuk-body govuk-!-margin-bottom-7">This guidance can help you carry out your risk assessment to make sure you keep employees and other people on site safe when opening during coronavirus (COVID-19).</p>
 
     <div class="app-c-govspeak app-c-markdown">
 
       {%- for outcome in outcomes %}
         {%- if outcome.id in rules %}
-        <div class="call-to-action">
           {{ outcome.description | markdownToHtml | safe }}
-        </div>
+          <hr class="govuk-section-break--visible">
         {% endif -%}
       {% endfor -%}
 
     </div>
 
-    <h3 class="govuk-heading-s">More help with your risk assessment</h3>
+    <h3 class="govuk-heading-l">More help with your risk assessment</h3>
     <p class="govuk-body govuk-!-margin-bottom-7">
       <a class="govuk-link" href="https://www.gov.uk/guidance/working-safely-during-coronavirus-covid-19">Read the detailed guidance for your sector.</a>
     </p>

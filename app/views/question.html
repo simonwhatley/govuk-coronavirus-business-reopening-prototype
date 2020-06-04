@@ -22,52 +22,52 @@
     <h1 class="govuk-heading-xl">
       {{ serviceName }}
     </h1>
-    
+
     <form action="{{ actions.next }}" method="post" accept-charset="utf-8" novalidate>
-    
+
       {%- if question.type == 'single' %}
         {{ govukRadios({
           idPrefix: question.id,
           name: question.name,
           fieldset: {
             legend: {
-              text: question.title,
+              text: question.label.text,
               classes: "govuk-fieldset__legend--m"
             }
           },
           hint: {
-            text: question.hint
+            text: question.hint.text
           } if question.hint,
           errorMessage: errors | getErrorMessage(question.id),
           items: question.items
         }) }}
       {% endif -%}
-      
+
       {%- if question.type == 'multiple' %}
         {{ govukCheckboxes({
           idPrefix: question.id,
           name: question.name,
           fieldset: {
             legend: {
-              text: question.title,
+              text: question.label.text,
               classes: "govuk-fieldset__legend--m"
             }
           },
           hint: {
-            text: question.hint
+            text: question.hint.text
           } if question.hint,
           errorMessage: errors | getErrorMessage(question.id),
           items: question.items
         }) }}
-      {% endif -%}      
-    
+      {% endif -%}
+
       {{ govukButton({
         text: "Next step",
         classes: "govuk-!-margin-top-5"
       }) }}
-      
+
     </form>
-    
+
   </div>
 </div>
 
