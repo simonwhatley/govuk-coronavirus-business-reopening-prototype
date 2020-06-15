@@ -15,14 +15,14 @@
         "value": "construction",
         "text": "Construction and other outdoor work",
         "hint": {
-          "text": "For example, construction, energy and utilities, farming and agriculture, forestry, waste management and other infrastructure, railway services, street and highway services"
+          "text": "For example, construction, energy and utilities, farming and agriculture, forestry, waste management, and  infrastructure"
         }
       },
       {
         "value": "factories",
         "text": "Factories, plants, warehouses",
         "hint": {
-          "text": "For example, manufacturing and chemical plants, food and other large processing plants, warehouses, distribution centres, port operations"
+          "text": "For example, manufacturing and chemical plants, food and other large processing plants, warehouses, port operations"
         }
       },
       {
@@ -48,14 +48,14 @@
       },
       {
         "value": "shops",
-        "text": "Shops and branches",
+        "text": "Retail businesses",
         "hint": {
           "text": "For example, all types of shops that are currently closed"
         }
       },
       {
         "value": "vehicles",
-        "text": "Vehicles - working in or from a vehicle",
+        "text": "Vehicles – working in or from a vehicle",
         "hint": {
           "text": "For example, couriers, mobile workers, lorry drivers, on-site transit, work vehicles, field forces"
         }
