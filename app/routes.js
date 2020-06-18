@@ -59,7 +59,7 @@ router.post('/sectors', checkHasAnswers, (req, res) => {
     let error = {};
     error.fieldName = 'sectors';
     error.href = '#sectors';
-    error.text = 'Choose an answer';
+    error.text = 'Choose which sectors apply to your business';
     errors.push(error);
   }
 
@@ -106,7 +106,7 @@ router.post('/staff', checkHasAnswers, (req, res) => {
     let error = {};
     error.fieldName = 'staff';
     error.href = '#staff';
-    error.text = 'Choose an answer';
+    error.text = 'Choose how many staff you have';
     errors.push(error);
   }
 
@@ -153,7 +153,7 @@ router.post('/visitors', checkHasAnswers, (req, res) => {
     let error = {};
     error.fieldName = 'visitors';
     error.href = '#visitors';
-    error.text = 'Choose an answer';
+    error.text = 'Choose whether you have customers, visitors or contractors on site';
     errors.push(error);
   }
 
@@ -200,7 +200,7 @@ router.post('/meetings', checkHasAnswers, (req, res) => {
     let error = {};
     error.fieldName = 'meetings';
     error.href = '#meetings';
-    error.text = 'Choose an answer';
+    error.text = 'Choose whether you have staff meetings';
     errors.push(error);
   }
 
@@ -247,7 +247,7 @@ router.post('/travel', checkHasAnswers, (req, res) => {
     let error = {};
     error.fieldName = 'travel';
     error.href = '#travel';
-    error.text = 'Choose an answer';
+    error.text = 'Choose whether your employees travel for work';
     errors.push(error);
   }
 
@@ -294,7 +294,7 @@ router.post('/goods', checkHasAnswers, (req, res) => {
     let error = {};
     error.fieldName = 'goods';
     error.href = '#goods';
-    error.text = 'Choose an answer';
+    error.text = 'Choose whether you send or receive goods on your site';
     errors.push(error);
   }
 

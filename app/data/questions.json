@@ -4,10 +4,10 @@
     "name": "answers[sectors]",
     "position": 1,
     "label": {
-      "text": "Which of these sectors apply to your business?"
+      "text": "Which of these apply to your business?"
     },
     "hint": {
-      "text": "Choose all that apply"
+      "text": "Select all that apply"
     },
     "type": "multiple",
     "items": [
@@ -15,14 +15,14 @@
         "value": "construction",
         "text": "Construction and other outdoor work",
         "hint": {
-          "text": "For example, construction, energy and utilities, farming and agriculture, forestry, waste management and other infrastructure, railway services, street and highway services"
+          "text": "For example, construction, energy and utilities, farming and agriculture, forestry, waste management, and infrastructure"
         }
       },
       {
         "value": "factories",
         "text": "Factories, plants, warehouses",
         "hint": {
-          "text": "For example, manufacturing and chemical plants, food and other large processing plants, warehouses, distribution centres, port operations"
+          "text": "For example, manufacturing and chemical plants, food and other large processing plants, warehouses, port operations"
         }
       },
       {
@@ -34,35 +34,32 @@
       },
       {
         "value": "offices",
-        "text": "Offices, contact centres, operation rooms",
-        "hint": {
-          "text": "For example, repair services, fitters, meter readers, plumbers, cleaners, cooks, surveyors, delivery drivers who come to the door"
-        }
+        "text": "Offices, contact centres, operation rooms"
       },
       {
         "value": "restaurants",
         "text": "Restaurants with takeaway and delivery",
         "hint": {
-          "text": "For example, restaurants and pubs operating as take-aways, bars, cafes, food to go, food delivery, takeaways and mobile catering, contract catering"
+          "text": "For example, restaurants and pubs operating as takeaways, bars, cafes, food to go, food delivery, catering businesses"
         }
       },
       {
         "value": "shops",
-        "text": "Shops and branches",
-        "hint": {
-          "text": "For example, all types of shops that are currently closed"
-        }
+        "text": "Retail businesses"
       },
       {
         "value": "vehicles",
-        "text": "Vehicles - working in or from a vehicle",
+        "text": "Vehicles – working in or from a vehicle",
         "hint": {
           "text": "For example, couriers, mobile workers, lorry drivers, on-site transit, work vehicles, field forces"
         }
       },
       {
         "value": "homes",
-        "text": "Working in other people’s homes"
+        "text": "Working in other people’s homes",
+        "hint": {
+          "text": "For example, repair services, fitters, meter readers, plumbers, cleaners, cooks, surveyors, delivery drivers who come to the door"
+        }
       },
       {
         "value": "none",
@@ -75,7 +72,7 @@
     "name": "answers[staff]",
     "position": 2,
     "label": {
-      "text": "How many staff do you have?"
+      "text": "How many employees do you have?"
     },
     "type": "single",
     "items": [
@@ -132,7 +129,10 @@
     "name": "answers[travel]",
     "position": 5,
     "label": {
-      "text": "Do your employees need to travel for work?"
+      "text": "Do your employees need to travel for work? (besides their normal commute from home to work)"
+    },
+    "hint": {
+      "text": "If your business requires employees to travel to different places (such as construction workers, or those who travel to client sites) then select 'yes'."
     },
     "type": "single",
     "items": [
@@ -151,7 +151,7 @@
     "name": "answers[goods]",
     "position": 6,
     "label": {
-      "text": "Do you send or receive goods on your site?"
+      "text": "Do you send and receive goods on your site?"
     },
     "type": "single",
     "items": [
