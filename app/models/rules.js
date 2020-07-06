@@ -64,8 +64,8 @@ exports.find = function(answers) {
 
   if (answers['sectors'] !== undefined) {
 
-    if (answers['sectors'].indexOf('restaurants') !== -1) {
-      outcomes.push('restaurants_social_distancing');
+    if (answers['sectors'].indexOf('hospitality') !== -1) {
+      outcomes.push('hospitality_social_distancing');
     }
 
   }
@@ -130,8 +130,8 @@ exports.find = function(answers) {
 
   if (answers['sectors'] !== undefined) {
 
-    if (answers['sectors'].indexOf('restaurants') !== -1) {
-      outcomes.push('restaurants_cleaning');
+    if (answers['sectors'].indexOf('hospitality') !== -1) {
+      outcomes.push('hospitality_cleaning');
     }
 
   }

@@ -27,6 +27,34 @@
 
     <p class="govuk-body govuk-!-margin-bottom-7">You should also consider the security implications of any decisions and control measures you intend to put in place, as any revisions could present new or altered security risks that may require mitigation.</p>
 
+    {%- if "close_contact" in data['answers']['sectors'] %}
+
+      <p class="govuk-body">Close contact services include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>hairdressing</li>
+        <li>barbershops</li>
+        <li>beauty and nail bars</li>
+        <li>makeup</li>
+        <li>tattoo and spray tanning studios</li>
+        <li>spas</li>
+        <li>sports and massage therapy</li>
+        <li>well being and holistic locations</li>
+        <li>dress fitters</li>
+        <li>tailors</li>
+        <li>fashion designers</li>
+      </ul>
+
+      <p class="govuk-body">This guidance is also designed for those who provide mobile close contact services from their homes and in other people’s homes, those in retail environments and the arts, as well as those studying hair and beauty in vocational training environments.</p>
+
+      <p class="govuk-body">Dress fitters, tailors and fashion designers were permitted to reopen in line with non-essential retail on 15 June 2020.</p>
+
+      <p class="govuk-body">Hairdressers and barbershops will be permitted to reopen for services that relate to cutting or treating hair on the head only from 4 July 2020.</p>
+
+      <p class="govuk-body govuk-!-margin-bottom-7">The other services outlined above will remain closed until further notice subject to the <a class="govuk-link" href="https://www.gov.uk/government/publications/our-plan-to-rebuild-the-uk-governments-covid-19-recovery-strategy/our-plan-to-rebuild-the-uk-governments-covid-19-recovery-strategy#moving-to-the-next-phase">5 tests</a>, but this guidance will help you prepare for reopening.</p>
+
+    {% endif -%}
+
     <div class="app-c-govspeak app-c-markdown">
 
       {%- for outcome in outcomes %}
