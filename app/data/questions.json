@@ -37,10 +37,14 @@
         "text": "Offices, contact centres, operation rooms"
       },
       {
-        "value": "restaurants",
-        "text": "Restaurants with takeaway and delivery",
+        "value": "hospitality",
+        "text": "Restaurants, pubs, bars and takeaway services"
+      },
+      {
+        "value": "close_contact",
+        "text": "Close contact services",
         "hint": {
-          "text": "For example, restaurants and pubs operating as takeaways, bars, cafes, food to go, food delivery, catering businesses"
+          "text": "For example, hairdressers, barbershops, tattoo parlours, spas, sports, massage therapy and tailors"
         }
       },
       {
@@ -91,7 +95,7 @@
     "name": "answers[visitors]",
     "position": 3,
     "label": {
-      "text": "Do you have customers, visitors or contractors on site?"
+      "text": "Do you have customers or visitors on site?"
     },
     "type": "single",
     "items": [
