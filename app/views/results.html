@@ -30,13 +30,22 @@
     <div class="app-c-govspeak app-c-markdown">
 
       {%- for outcome in outcomes %}
+
         {%- if outcome.id in rules %}
+
+          {% if outcome.id == outcome.parent %}
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+          {% endif %}
+
           {{ outcome.description | markdownToHtml | safe }}
-          <hr class="govuk-section-break--visible">
+
         {% endif -%}
+
       {% endfor -%}
 
     </div>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
     <h3 class="govuk-heading-l">More help with your risk assessment</h3>
     <p class="govuk-body">
